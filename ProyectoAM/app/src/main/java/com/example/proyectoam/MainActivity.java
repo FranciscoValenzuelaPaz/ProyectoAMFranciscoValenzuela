@@ -15,8 +15,15 @@ public class MainActivity extends AppCompatActivity {
         //Francisco Valenzuela
         setContentView(R.layout.activity_main);
     }
-    public void cambiarRegistro(View view){
+
+    public void cambiarRegistro(View view) {
         Intent intent = new Intent(this, RegistroActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void cambiarInicio(View view) {
+        Intent intent = new Intent(this, InicioActivity.class);
         startActivity(intent);
     }
 }
