@@ -3,7 +3,7 @@ package com.example.proyectoam;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Toolbar;
+
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -11,7 +11,6 @@ public class InicioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio2);
-
 
     }
 }
