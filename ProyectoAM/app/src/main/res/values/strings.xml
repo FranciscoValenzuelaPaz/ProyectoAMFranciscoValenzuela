@@ -20,4 +20,13 @@
     <string name="ingrese_correo">Ingrese correo</string>
     <string name="registrar">Registrar</string>
     <string name="desc">desc</string>
+    <string name="ingrese_nombre">Ingrese Nombre</string>
+    <string name="iniciar_sesion">INICIAR SESION</string>
+    <string name="avatar_de_usuario">Avatar de usuario</string>
+
+
+    <string name="ingrese_correo2">Ingrese Correo</string>
+
+    <string name="ingresar">Ingresar</string>
+    <string name="olvid_su_contrase_a">¿Olvidó su contraseña?</string>
 </resources>

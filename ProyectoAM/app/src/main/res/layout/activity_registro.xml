@@ -41,7 +41,8 @@
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318" />
+        app:layout_constraintVertical_bias="0.318"
+        tools:text="Nombre" />
 
     <TextView
         android:id="@+id/textView7"
@@ -80,12 +81,12 @@
         app:layout_constraintVertical_bias="0.745" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:autofillHints="Nombre"
+        android:id="@+id/nombre"
         android:layout_width="318dp"
         android:layout_height="48dp"
+        android:autofillHints="Nombre"
         android:ems="10"
-        android:hint="@string/ingrese_usuario"
+        android:hint="@string/ingrese_nombre"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +96,7 @@
         app:layout_constraintVertical_bias="0.378" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/contrasena"
         android:autofillHints="Constrasena"
         android:layout_width="319dp"
         android:layout_height="51dp"
@@ -110,7 +111,7 @@
         app:layout_constraintVertical_bias="0.522" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/correo"
         android:autofillHints="Correo"
         android:layout_width="319dp"
         android:layout_height="50dp"
@@ -125,7 +126,7 @@
         app:layout_constraintVertical_bias="0.675" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/cargo"
         android:layout_width="322dp"
         android:layout_height="50dp"
         android:entries="@array/opciones"
@@ -138,6 +139,7 @@
 
     <Button
         android:id="@+id/button2"
+        android:onClick="registrar"
         android:layout_width="327dp"
         android:layout_height="57dp"
         android:text="@string/registrar"
@@ -146,6 +148,7 @@
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
+        app:layout_constraintVertical_bias="0.934"
+        tools:ignore="UsingOnClickInXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
