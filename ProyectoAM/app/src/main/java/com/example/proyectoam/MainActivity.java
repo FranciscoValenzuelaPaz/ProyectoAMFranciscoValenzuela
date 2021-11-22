@@ -17,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void cambiarRegistro(View view) {
-        Intent intent = new Intent(this, RegistroActivity.class);
+    public void cambiarInicioSesion(View view) {
+        Intent intent = new Intent(this, IniciarSesionActivity.class);
         startActivity(intent);
 
     }
 
-    public void cambiarInicio(View view) {
-        Intent intent = new Intent(this, InicioActivity.class);
+    public void cambiarRegistrar(View view) {
+        Intent intent = new Intent(this, RegistroActivity.class);
         startActivity(intent);
     }
 

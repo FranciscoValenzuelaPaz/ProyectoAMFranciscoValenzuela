@@ -33,6 +33,6 @@ public class RegistroActivity extends AppCompatActivity {
         usu.setCorreo(cajacorreo.getText().toString());
         usu.setCargo(cajacargo.getSelectedItem().toString());
         sqLite.crearUsuario(usu);
-
     }
+
 }
