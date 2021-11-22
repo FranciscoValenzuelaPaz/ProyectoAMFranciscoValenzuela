@@ -15,7 +15,7 @@ import java.util.List;
 public class UsuariosSQLite extends SQLiteOpenHelper {
 
     public UsuariosSQLite(Context context) {
-        super(context, "BDPROYECTOAM", null, 1);
+        super(context, "BDUSUARIOS", null, 1);
     }
 
     @Override
@@ -32,6 +32,16 @@ public class UsuariosSQLite extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO USUARIOS (NOMBRE,CONTRASENA,CORREO,CARGO) VALUES ('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', '"+usuario.getCorreo()+"', '"+usuario.getCargo()+"');");
         db.close();
     }
+    public void editarUsuario(Usuario usuario,int id){
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("UPDATE USUARIOS SET NOMBRE='"+usuario.getNombre()+"',CONTRASENA='"+usuario.getContrasena()+"',CORREO='"+usuario.getCorreo()+"',CARGO='"+usuario.getCargo()+"' WHERE ID ="+id+";");
+        db.close();
+    }
+    public void eliminarUsuario(int id){
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("DELETE FROM USUARIOS WHERE ID="+id+";");
+    }
+
     public List<Usuario> leerUsuario(){
         ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
         SQLiteDatabase db = getReadableDatabase();
@@ -43,7 +53,7 @@ public class UsuariosSQLite extends SQLiteOpenHelper {
             usu.setContrasena(cursor.getString(2));
             usu.setCorreo(cursor.getString(3));
             usu.setCargo(cursor.getString(4));
-            usuarios .add(usu);
+            usuarios.add(usu);
             usu = null;
         }
         cursor.close();
