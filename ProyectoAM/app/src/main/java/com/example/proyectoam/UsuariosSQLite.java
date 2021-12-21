@@ -60,4 +60,27 @@ public class UsuariosSQLite extends SQLiteOpenHelper {
         db.close();
         return usuarios;
     }
+    public boolean iniciarSesion(String usuario,String contrasena){
+        ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+        boolean respuesta = false;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM USUARIOS;",null);
+        while(cursor.moveToNext()){
+            Usuario usu = new Usuario();
+            usu.setId(cursor.getInt(0));
+            usu.setNombre(cursor.getString(1));
+            usu.setContrasena(cursor.getString(2));
+            usu.setCorreo(cursor.getString(3));
+            usu.setCargo(cursor.getString(4));
+            usuarios.add(usu);
+            usu = null;
+            if(usuario.equals(usu.getNombre()) && contrasena.equals(usu.getContrasena())){
+                respuesta=true;
+                break;
+            }
+        }
+        cursor.close();
+        db.close();
+        return respuesta;
+    }
 }
